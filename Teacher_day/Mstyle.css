@@ -1,0 +1,149 @@
+*,*::before,*::after {
+    box-sizing: content-box;
+}
+
+body{
+    overflow-x: hidden;
+    overflow: hidden;
+    background-image: linear-gradient(120deg, #43cea2, #185a9d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+/* This is for the scrolling animation */
+.scrollbar{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    margin-inline: auto;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
+    top: 680px ;
+    user-select: none;
+}
+
+.element {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: red;
+    left: 100%;
+    animation: slideLeft 12s linear infinite;
+    animation-delay: calc(12s/8 * var(--order));
+}
+
+#pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+@keyframes slideLeft{
+    to {left: -200px;}
+}
+
+/* This is for the background animation */
+
+.celebrate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+
+.decor{
+    height: auto;
+    width: calc(100%/14);
+    animation: drop 10s linear infinite;
+    animation-duration: calc(50s/var(--turn));
+}
+
+.decor img{
+    filter: blur(3px);
+}
+
+@keyframes drop {
+    0%{ transform:translateY(100vh) ;}
+    100%{transform: translateY(-10vh);}
+}
+
+/* This is the sentence part */
+
+.sentence{
+    position: relative;
+    display: flex;
+    bottom: 150px;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+.content {
+    font-size: 70px;
+    font-family: "Saira Stencil One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(to bottom, #fceabb, #f8b500);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Misalenous */
+
+#main_face {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 350px;
+    left: 45%;
+    bottom: 200px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+/* image boht side */
+
+.bothside {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    top: 100px;
+}
+
+#trai{
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    bottom: 300px;
+    left: 10%;
+}
+
+#phai
+{
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    bottom: 300px;
+    left: 70%;
+}
+
+.but
+{
+    position: relative;
+    display: flex;
+    font-size: 0.5em;
+    left: 10px;
+    border: 2px solid black;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+}   
