@@ -1,0 +1,109 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* luv */
+#luv
+{
+    position: absolute;
+    height: 45vh;
+    width:  45vh;
+    clip-path: circle(65.1% at 35% 35%);
+}
+
+/* Headlines */
+
+.group1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 1.5em;
+    left: 33%;
+    background: linear-gradient(to left, #5c3fecbb, #20bdff, #a5fecb);
+    width: 55%;
+    height: 20%;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#Headline
+{
+    font-size: 4em;
+    font-weight: bold;
+    text-align: left;
+    font-family: Carattere,Arial;
+    color: hsla(0, 1%, 22%, 0.938);
+}
+
+/* main */
+
+.wrap{
+    position: relative;
+    display: flex;
+}
+
+#one{
+    top: 10vh;
+    left: 170vh;
+}
+
+#meme1{
+    clip-path: circle(50% at 50% 50%);
+    width: 20vh;
+    height: 20vh;
+}
+
+#two{
+    left: 50vh;
+    bottom: 7vh;
+    width: fit-content;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
+    background-color: #F8EDEB;
+}
+
+#content
+{
+    font-size: 2.5em;
+}
+
+#three{
+    left: 3%;
+    top: 20vh;
+}
+
+#meme2{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    border: 2px solid black;
+    width:  30vh;
+    height: 30vh;
+}
+
+#four{
+    left: 23%;
+    bottom: 25vh;
+    width: 73%;
+    
+}
+
+#talk{
+    font-size: 4vh;
+    line-height: 1.5;
+    font-family: Pacifico;
+    border: 2px solid black;
+    padding: 5%;
+    border-radius: 30px;
+    color: white;
+    background-image: linear-gradient(to left, #0575e6, #021b79);
+}

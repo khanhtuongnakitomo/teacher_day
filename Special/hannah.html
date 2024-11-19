@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./heart.css">
+    <link rel="icon" href="./media/gift.png">
+    <title> A secret ... ! </title>
+</head>
+<body>
+    <div class="box">
+        <div class="group"></div>
+    </div>
+    <div class="temp">    <a href="./congrats.html" id = 'First'> Chị bấm thử ik ✍️(◔◡◔) </a>    </div>
+    <script>
+        
+        
+        const group = document.querySelector('.group');
+        for (let i = 1 ; i < 20 ; i++){
+            const containerId = `iconContainer${i}`;
+            const container = document.createElement('div');
+            container.className = 'iconContainer';
+            container.id = containerId;
+            group.appendChild(container);
+            addIcons(containerId)
+        }
+
+        function addIcons(containerId) {
+            const iconContainer = document.getElementById(containerId);
+            const Unicode = [
+                '📖',
+                '🎨',
+                '🎓',
+                '✒️'
+            ];
+
+            for (let i = 0 ; i<50;i++){
+                const icon = document.createElement('i');
+                icon.className = 'icon fas';
+                icon.innerHTML = randomIcons(Unicode);
+                iconContainer.appendChild(icon);
+            }
+        }
+
+        // function to generate random unicode value
+
+        function randomIcons(values) {
+            const randomIndex = Math.floor(Math.random() * values.length);
+            return values[randomIndex];
+        }
+
+    </script>
+</body>
+</html>

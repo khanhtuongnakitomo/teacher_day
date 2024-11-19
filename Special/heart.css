@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(120deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+/* This is the moving background */
+.box{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    user-select: none;
+    z-index: 0;
+}
+
+.box .group {
+    position: relative;
+    transform: rotate(-30deg);
+    display: flex;
+    flex-direction: column;
+    gap: 1em ;
+}
+
+.iconContainer {
+    display: flex;
+    gap: 0.5em;
+    font-size: 4em;
+    width: 200vw;
+    animation: animate 80s linear infinite ;
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateX(-100vw);
+    }
+
+    50%{
+        transform: translateX(0vw);
+    }
+}
+
+.iconContainer:nth-child(even) {
+    animation: animate2 80s linear infinite ;
+}
+
+@keyframes animate2 {
+    0%,100%{
+        transform: translateX(0vw);
+    }
+
+    50%{
+        transform: translateX(-100vw);
+    }
+}
+
+
+/* button format */
+
+.temp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 40em;
+    height: 50%;
+    width:  50%;
+    top: 20vh;
+    left: 50vh;
+    background:linear-gradient(to right, #3859c5, #a13aca);
+    box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    z-index: 1;
+    
+}
+
+#First{
+    font-size: 4em;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    user-select: none;
+}
+
+    /* effect for click */
+    .temp {
+    appearance: none;
+    background-color: #FFFFFF;
+    box-shadow: #ffffff 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    quotes: auto;
+    text-align: center;
+    transition: all .15s;
+    touch-action: manipulation;
+    }
+
+    .temp:hover {
+    background-color: #000000;
+    box-shadow: #ffffff 0 -6px 8px inset;
+    transform: scale(1.125);
+    }
+
+    .temp:active {
+    transform: scale(1.025);
+    }
+
+    @media (min-width: 768px) {
+    .temp {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+    }
